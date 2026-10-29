@@ -1,35 +1,78 @@
-# Hi there, I'm Thành Marine 👋
+# Hi, I'm Thành Marine 👋
 
-An independent researcher and systems technician passionate about **Marine Engineering**, **System Dynamics**, and **Local-First AI Architectures**.
+I build practical systems at the intersection of marine engineering, local-first AI, and real-world tooling.
 
----
+I enjoy turning messy operational workflows into useful software — especially when the solution is reliable, offline-friendly, and designed for people in the field.
 
-### 🔬 Core Focus & Research
-
-- ⚓ **Marine Tech & CAD**: Engine telemetry systems (NMEA 2000 / N2K), Suzuki/Yamaha/Mercury database integrations, and boat design redesigns.
-- 🤖 **Local-First AI & Agents**: Developing agentic frameworks, NLU pipelines, and local LLM/Vector DB stacks (Ollama, Gemma, Redis, SQLite).
-- ⚡ **Mechanical & Electrical Engineering**: Professional expertise in electrical systems, mechanics, and dynamic equipment balancing.
+> “I like building tools that help humans work smarter, not just faster.”
 
 ---
 
-### 🛠 Tech Stack & Tools
+## About Me
 
-- **Languages & Core**: Python, C/C++, SQLite, SQL, Markdown
-- **Local AI & Data**: Ollama, Gemma, Redis Vector Store, Obsidian (Headless CMS)
-- **Marine & Engineering**: NMEA 2000 (N2K), CAD / 3D Design (SolidWorks / Fusion 360)
-- **Workflow & Environment**: VS Code, Prompt Engineering, Agent Architecture
+- ⚓ Marine technology and CAD: NMEA 2000 / N2K telemetry, engine diagnostics, boat design workflows
+- 🤖 Local-first AI and agents: agentic systems, NLU pipelines, local LLM stacks, vector search
+- ⚡ Engineering mindset: electrical systems, mechanics, reliability, and dynamic equipment optimization
+- 🤝 Collaboration: I enjoy working with builders, researchers, and operators who care about useful, human-centered solutions
 
 ---
 
-### 🚀 Active Projects
+## What I’m Working On
 
-- 🛠 **Aden Tools**: Catalog and technical service database management built with local-first principles.
-- 🤖 **Emma Agent**: An intelligent local-first agent system focusing on NLU, custom tools, and automated workflows.
-- 🚤 **Pocket Mobile Application Development**:
-- 📱 **Pocket Marine & Field Tools**: Lightweight mobile applications for real-time engine metrics, technical database lookup, and field utilities with full Google Play release workflows.
+- 🛠️ Aden Tools — a technical service and catalog system built around local-first data access and practical workflows
+- 🤖 Emma Agent — an intelligent local-first agent focused on NLU, custom tools, and workflow automation
+- 🚤 Pocket mobile development — lightweight field tools for marine operators and technicians
+- 📱 Pocket Marine & Field Tools — mobile apps for engine metrics, technical database lookups, and utility workflows
+
 ---
 
-### 📊 GitHub Stats
+## Tech Stack
+
+### Core
+- Python
+- C / C++
+- SQLite
+- SQL
+- Markdown
+
+### AI & Data
+- Ollama
+- Gemma
+- Redis Vector Store
+- Obsidian (headless CMS style workflows)
+
+### Marine & Engineering
+- NMEA 2000 (N2K)
+- CAD / 3D design (SolidWorks / Fusion 360)
+
+### Workflow
+- VS Code
+- Prompt Engineering
+- Agent Architecture
+- Local-first product thinking
+
+---
+
+## How I Work
+
+I care about:
+
+- Real-world usefulness over hype
+- Systems that work well without constant internet access
+- Clean interfaces for technical users
+- Building with curiosity, feedback, and iteration
+- Friendly collaboration with people who are excited to ship ideas
+
+I’m open to:
+
+- AI product experiments
+- Marine-tech tooling and telemetry projects
+- Local-first software prototypes
+- Research collaborations and technical partnerships
+
+---
+
+## GitHub Stats
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=ThanhMarine&show_icons=true&theme=tokyonight&hide_border=true" alt="Thành Marine's GitHub Stats" width="48%" />
@@ -37,7 +80,11 @@ An independent researcher and systems technician passionate about **Marine Engin
 </p>
 
 ---
-### 📫 Connect With Me
 
-- **Email**: ngn.ngocthanh@gmail.com
-- **Location**: Vietnam 🇻🇳
+## Let’s Connect
+
+- 📧 Email: ngn.ngocthanh@gmail.com
+- 📍 Location: Vietnam 🇻🇳
+- 💬 Open to collaborations in AI, marine systems, tooling, and product design
+
+If you’re building something practical, thoughtful, and real-world, I’d love to connect and learn from the work.
