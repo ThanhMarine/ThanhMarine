@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="vi" data-theme="light"
+      data-title-vi="Không tìm thấy trang — Thành Marine"
+      data-title-en="Page not found — Thành Marine"
+      data-desc-vi="Trang bạn tìm không tồn tại trên website của Thành Marine."
+      data-desc-en="The page you are looking for does not exist on Thành Marine's website.">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("tm-theme");
+        var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = saved || (systemDark ? "dark" : "light");
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+      document.documentElement.classList.add("js");
+    }());
+  </script>
+  <title>Không tìm thấy trang — Thành Marine</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#f7f5ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b141a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Thành Marine — về trang chủ">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="#0c1b26"></rect>
+          <circle cx="32" cy="32" r="19" fill="none" stroke="#67d8cf" stroke-width="1.4" opacity=".55"></circle>
+          <path d="M32 13 L37 32 L32 51 L27 32 Z" fill="#f7f5ef"></path>
+          <path d="M32 13 L37 32 L32 32 Z" fill="#b9541f"></path>
+          <circle cx="32" cy="32" r="2.6" fill="#f7f5ef" stroke="#0c1b26" stroke-width="1.2"></circle>
+        </svg>
+        <span class="brand-text">Thành <em>Marine</em></span>
+      </a>
+      <div class="header-tools">
+        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Chuyển giao diện sáng/tối" data-aria-vi="Chuyển giao diện sáng/tối" data-aria-en="Toggle light and dark theme">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"></path></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.4A8.4 8.4 0 0 1 9.6 4a8.5 8.5 0 1 0 10.4 10.4Z"></path></svg>
+        </button>
+        <button class="lang-button" id="langToggle" type="button" aria-label="Switch to English" data-aria-vi="Chuyển sang tiếng Anh" data-aria-en="Chuyển sang tiếng Việt">
+          <span class="lang-label">EN</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="error-page" id="main">
+    <div class="shell error-inner">
+      <p class="error-code">ERROR / 404</p>
+      <h1 data-vi="Lạc hướng rồi." data-en="Off the chart.">Lạc hướng rồi.</h1>
+      <p data-vi="Trang bạn tìm không tồn tại, đã được di chuyển hoặc đường dẫn không đúng. Hãy quay về hải đồ chính." data-en="The page you're looking for doesn't exist, has moved, or the address is wrong. Head back to the main chart.">
+        Trang bạn tìm không tồn tại, đã được di chuyển hoặc đường dẫn không đúng. Hãy quay về hải đồ chính.
+      </p>
+      <div>
+        <a class="button button-primary" href="index.html">
+          <span data-vi="Về trang chủ" data-en="Back to home">Về trang chủ</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5.5 15 10l-4.5 4.5"></path></svg>
+        </a>
+        <a class="button button-ghost" href="index.html#contact">
+          <span data-vi="Liên hệ" data-en="Contact">Liên hệ</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-brand">
+        <p>© <span id="year">2026</span> Aden Nguyen (Thành Marine)</p>
+        <p class="footer-note" data-vi="Trang web cá nhân · TP. Hồ Chí Minh, Việt Nam" data-en="Personal website · Ho Chi Minh City, Vietnam">Trang web cá nhân · TP. Hồ Chí Minh, Việt Nam</p>
+      </div>
+      <nav class="footer-nav" aria-label="Liên kết chân trang">
+        <a href="index.html" data-vi="Trang chủ" data-en="Home">Trang chủ</a>
+        <a href="privacy.html" data-vi="Chính sách quyền riêng tư" data-en="Privacy policy">Chính sách quyền riêng tư</a>
+        <a href="terms.html" data-vi="Điều khoản sử dụng" data-en="Terms of use">Điều khoản sử dụng</a>
+      </nav>
+      <p class="footer-updated mono" data-vi="Cập nhật: 05/11/2026" data-en="Updated: 05 Nov 2026">Cập nhật: 05/11/2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

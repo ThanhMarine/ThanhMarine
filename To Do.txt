@@ -1,0 +1,20 @@
+Cách tạo và push lên GitHub
+Mở terminal trên máy và chạy lần lượt:
+
+# 1. Tạo thư mục
+mkdir viettest-website && cd viettest-website
+
+# 2. Tạo 4 file (dùng editor bất kỳ: VS Code, nano, vim...)
+#    - index.html  → paste nội dung File 1
+#    - style.css   → paste nội dung File 2
+#    - script.js   → paste nội dung File 3
+#    - CNAME       → paste nội dung File 4
+
+# 3. Khởi tạo git và push lên GitHub
+git init
+git remote add origin https://github.com/ThanhMarine/ThanhMarine.git
+git checkout -b personal-website
+git add .
+git commit -m "Add personal website"
+git push -u origin personal-website
+Sau khi push xong, bạn có thể deploy qua Cloudflare Pages (nhanh nhất, DNS đã sẵn sàng) hoặc GitHub Pages. 

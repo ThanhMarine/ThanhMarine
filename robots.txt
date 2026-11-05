@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Không chặn tài nguyên cần cho việc xác minh Google Search Console
+Allow: /assets/
+
+Sitemap: https://thanhmarine.viettest.io.vn/sitemap.xml

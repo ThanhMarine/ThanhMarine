@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="vi" data-theme="light"
+      data-title-vi="Thành Marine — Kỹ sư hàng hải &amp; AI local-first"
+      data-title-en="Thành Marine — Marine engineer &amp; local-first AI"
+      data-desc-vi="Trang web cá nhân của Aden Nguyen (Thành Marine) — kỹ thuật hàng hải, NMEA 2000, AI chạy cục bộ và công cụ hiện trường. TP. Hồ Chí Minh, Việt Nam."
+      data-desc-en="Personal website of Aden Nguyen (Thành Marine) — marine engineering, NMEA 2000 telemetry, local-first AI and field tools. Ho Chi Minh City, Vietnam.">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("tm-theme");
+        var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = saved || (systemDark ? "dark" : "light");
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+      document.documentElement.classList.add("js");
+    }());
+  </script>
+
+  <title>Thành Marine — Kỹ sư hàng hải &amp; AI local-first</title>
+  <meta name="description" content="Trang web cá nhân của Aden Nguyen (Thành Marine) — kỹ thuật hàng hải, NMEA 2000, AI chạy cục bộ và công cụ hiện trường. TP. Hồ Chí Minh, Việt Nam.">
+  <meta name="author" content="Aden Nguyen (Thành Marine)">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://thanhmarine.viettest.io.vn/">
+
+  <meta name="theme-color" content="#f7f5ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b141a" media="(prefers-color-scheme: dark)">
+
+  <!-- Google Search Console: thay giá trị bên dưới bằng mã xác minh của bạn rồi deploy lại. -->
+  <meta name="google-site-verification" content="REPLACE_WITH_YOUR_GOOGLE_SEARCH_CONSOLE_TOKEN">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Thành Marine">
+  <meta property="og:title" content="Thành Marine — Marine engineer &amp; local-first AI">
+  <meta property="og:description" content="Marine engineering, NMEA 2000 telemetry, local-first AI and practical field tools. Based in Ho Chi Minh City, Vietnam.">
+  <meta property="og:url" content="https://thanhmarine.viettest.io.vn/">
+  <meta property="og:image" content="https://thanhmarine.viettest.io.vn/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Thành Marine — marine engineering, local-first AI and field tools">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Thành Marine — Marine engineer &amp; local-first AI">
+  <meta name="twitter:description" content="Marine engineering, NMEA 2000 telemetry, local-first AI and practical field tools.">
+  <meta name="twitter:image" content="https://thanhmarine.viettest.io.vn/assets/og-image.png">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aden Nguyen",
+    "alternateName": ["Thành Marine", "ThanhMarine"],
+    "url": "https://thanhmarine.viettest.io.vn/",
+    "image": "https://thanhmarine.viettest.io.vn/assets/apple-touch-icon.png",
+    "jobTitle": "Marine engineer and software builder",
+    "description": "Marine engineer building local-first AI systems and practical field tools for marine operations.",
+    "email": "mailto:ngn.ngocthanh@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ho Chi Minh City",
+      "addressCountry": "VN"
+    },
+    "sameAs": ["https://github.com/ThanhMarine"],
+    "knowsAbout": [
+      "Marine engineering",
+      "NMEA 2000",
+      "Engine diagnostics",
+      "Local-first AI",
+      "Ollama",
+      "SQLite",
+      "CAD"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Thành Marine — về đầu trang">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="#0c1b26"></rect>
+          <circle cx="32" cy="32" r="19" fill="none" stroke="#67d8cf" stroke-width="1.4" opacity=".55"></circle>
+          <path d="M32 13 L37 32 L32 51 L27 32 Z" fill="#f7f5ef"></path>
+          <path d="M32 13 L37 32 L32 32 Z" fill="#b9541f"></path>
+          <circle cx="32" cy="32" r="2.6" fill="#f7f5ef" stroke="#0c1b26" stroke-width="1.2"></circle>
+        </svg>
+        <span class="brand-text">Thành <em>Marine</em></span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Điều hướng chính">
+        <a href="#about" data-vi="Giới thiệu" data-en="About">Giới thiệu</a>
+        <a href="#work" data-vi="Dự án" data-en="Work">Dự án</a>
+        <a href="#approach" data-vi="Cách làm việc" data-en="Approach">Cách làm việc</a>
+        <a href="#stack" data-vi="Năng lực" data-en="Stack">Năng lực</a>
+        <a href="#contact" data-vi="Liên hệ" data-en="Contact">Liên hệ</a>
+      </nav>
+
+      <div class="header-tools">
+        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Chuyển giao diện sáng/tối" data-aria-vi="Chuyển giao diện sáng/tối" data-aria-en="Toggle light and dark theme">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4.2"></circle>
+            <path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"></path>
+          </svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20 14.4A8.4 8.4 0 0 1 9.6 4a8.5 8.5 0 1 0 10.4 10.4Z"></path>
+          </svg>
+        </button>
+        <button class="lang-button" id="langToggle" type="button" aria-label="Switch to English" data-aria-vi="Chuyển sang tiếng Anh" data-aria-en="Chuyển sang tiếng Việt">
+          <span class="lang-label">EN</span>
+        </button>
+        <button class="menu-button" id="menuToggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Mở menu" data-aria-vi="Mở menu" data-aria-en="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Aden Nguyen · Thành Marine</p>
+          <h1 id="hero-title">
+            <span data-vi="Kỹ thuật hàng hải," data-en="Marine engineering,">Kỹ thuật hàng hải,</span><br>
+            <span class="accent" data-vi="AI cục bộ," data-en="local-first AI,">AI cục bộ,</span><br>
+            <span data-vi="công cụ thực tế." data-en="tools that work.">công cụ thực tế.</span>
+          </h1>
+          <p class="lede" data-vi="Tôi xây những hệ thống thực dụng ở giao điểm giữa kỹ thuật hàng hải, AI chạy cục bộ và công cụ hiện trường — ưu tiên ổn định, hoạt động offline và dễ dùng cho người làm việc thật." data-en="I build practical systems where marine engineering, local-first AI and field tooling meet — reliable, offline-friendly, and designed for people doing real work.">
+            Tôi xây những hệ thống thực dụng ở giao điểm giữa kỹ thuật hàng hải, AI chạy cục bộ và công cụ hiện trường — ưu tiên ổn định, hoạt động offline và dễ dùng cho người làm việc thật.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">
+              <span data-vi="Xem dự án" data-en="See the work">Xem dự án</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5.5 15 10l-4.5 4.5"></path></svg>
+            </a>
+            <a class="button button-ghost" href="mailto:ngn.ngocthanh@gmail.com?subject=Hello%20Th%C3%A0nh%20Marine">
+              <span data-vi="Liên hệ" data-en="Get in touch">Liên hệ</span>
+            </a>
+          </div>
+          <ul class="hero-meta">
+            <li><span class="mono">10°46′N 106°42′E</span> <span data-vi="TP. Hồ Chí Minh, Việt Nam" data-en="Ho Chi Minh City, Vietnam">TP. Hồ Chí Minh, Việt Nam</span></li>
+            <li><span class="status-dot" aria-hidden="true"></span> <span data-vi="Mở cho hợp tác" data-en="Open to collaboration">Mở cho hợp tác</span></li>
+            <li><a href="https://github.com/ThanhMarine" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+
+        <div class="hero-figure" aria-hidden="true">
+          <div class="chart">
+            <span class="chart-tag">N2K / LOCAL</span>
+            <span class="chart-corner chart-corner-tr"></span>
+            <span class="chart-corner chart-corner-bl"></span>
+            <svg viewBox="0 0 420 460" role="presentation" focusable="false">
+              <g class="chart-grid">
+                <path d="M20 20h380v420H20z"></path>
+                <path d="M20 125h380M20 230h380M20 335h380M115 20v420M210 20v420M305 20v420"></path>
+              </g>
+              <circle class="chart-ring" cx="210" cy="222" r="132"></circle>
+              <circle class="chart-ring chart-ring-faint" cx="210" cy="222" r="96"></circle>
+              <g class="chart-ticks">
+                <path d="M210 90v14M210 340v14M78 222h14M328 222h14"></path>
+                <path d="M210 74v8M210 362v8M60 222h8M352 222h8"></path>
+              </g>
+              <g class="chart-compass">
+                <text x="210" y="72" text-anchor="middle">N</text>
+                <text x="210" y="386" text-anchor="middle">S</text>
+                <text x="56" y="227" text-anchor="middle">W</text>
+                <text x="364" y="227" text-anchor="middle">E</text>
+              </g>
+              <path class="chart-needle" d="M210 138 L230 222 L210 306 L190 222 Z"></path>
+              <path class="chart-needle-accent" d="M210 138 L230 222 L210 222 Z"></path>
+              <circle class="chart-hub" cx="210" cy="222" r="7"></circle>
+              <path class="chart-route" d="M96 330 C138 292 158 306 186 272 S250 218 282 246 S330 300 348 268"></path>
+              <circle class="chart-point" cx="96" cy="330" r="5"></circle>
+              <circle class="chart-point chart-point-accent" cx="348" cy="268" r="5"></circle>
+              <text class="chart-note" x="36" y="416">SAIGON · VN</text>
+              <text class="chart-note" x="288" y="416">OFFLINE-READY</text>
+              <text class="chart-note chart-note-small" x="36" y="438">10°46′N 106°42′E</text>
+            </svg>
+            <div class="chart-footer">
+              <span class="mono">FIG. 01</span>
+              <span data-vi="Hải đồ: hệ thống thực dụng" data-en="Chart: practical systems">Hải đồ: hệ thống thực dụng</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="kicker"><span>01</span> <span data-vi="Giới thiệu" data-en="About">Giới thiệu</span></p>
+          <h2 id="about-title" data-vi="Kỹ sư, người xây công cụ, người thích sự đơn giản." data-en="Engineer, toolmaker, and a fan of simple systems.">Kỹ sư, người xây công cụ, người thích sự đơn giản.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="prose reveal">
+            <p data-vi="Tôi là Aden Nguyen, còn được biết đến với tên Thành Marine. Tôi làm việc trong lĩnh vực kỹ thuật hàng hải và dành phần lớn thời gian để biến những quy trình vận hành phức tạp thành phần mềm dễ hiểu, đáng tin cậy và dùng được ngay trên tàu hoặc tại hiện trường." data-en="I'm Aden Nguyen, also known as Thành Marine. I work in marine engineering and spend most of my time turning messy operational workflows into software that is clear, reliable and usable right on board or in the field.">
+              Tôi là Aden Nguyen, còn được biết đến với tên Thành Marine. Tôi làm việc trong lĩnh vực kỹ thuật hàng hải và dành phần lớn thời gian để biến những quy trình vận hành phức tạp thành phần mềm dễ hiểu, đáng tin cậy và dùng được ngay trên tàu hoặc tại hiện trường.
+            </p>
+            <p data-vi="Công việc của tôi xoay quanh telemetry NMEA 2000, chẩn đoán động cơ, thiết kế CAD và các hệ thống AI local-first. Tôi thích những giải pháp không phụ thuộc vào kết nối internet liên tục, có giao diện rõ ràng cho người dùng kỹ thuật và được cải tiến qua phản hồi thực tế." data-en="My work revolves around NMEA 2000 telemetry, engine diagnostics, CAD design and local-first AI systems. I favour solutions that don't depend on a constant internet connection, give technical users a clear interface, and improve through real feedback.">
+              Công việc của tôi xoay quanh telemetry NMEA 2000, chẩn đoán động cơ, thiết kế CAD và các hệ thống AI local-first. Tôi thích những giải pháp không phụ thuộc vào kết nối internet liên tục, có giao diện rõ ràng cho người dùng kỹ thuật và được cải tiến qua phản hồi thực tế.
+            </p>
+            <blockquote>
+              <p data-vi="“Tôi thích xây những công cụ giúp con người làm việc thông minh hơn, chứ không chỉ nhanh hơn.”" data-en="“I like building tools that help humans work smarter, not just faster.”">“Tôi thích xây những công cụ giúp con người làm việc thông minh hơn, chứ không chỉ nhanh hơn.”</p>
+            </blockquote>
+          </div>
+
+          <aside class="fact-card reveal" aria-label="Thông tin nhanh">
+            <h3 data-vi="Hiện tại" data-en="At a glance">Hiện tại</h3>
+            <dl>
+              <div>
+                <dt data-vi="Vị trí" data-en="Based in">Vị trí</dt>
+                <dd data-vi="TP. Hồ Chí Minh, Việt Nam" data-en="Ho Chi Minh City, Vietnam">TP. Hồ Chí Minh, Việt Nam</dd>
+              </div>
+              <div>
+                <dt data-vi="Đang xây" data-en="Building">Đang xây</dt>
+                <dd>Aden Tools · Emma Agent · Pocket Marine</dd>
+              </div>
+              <div>
+                <dt data-vi="Quan tâm" data-en="Interests">Quan tâm</dt>
+                <dd>N2K · local LLM · CAD · field tools</dd>
+              </div>
+              <div>
+                <dt data-vi="Hợp tác" data-en="Open to">Hợp tác</dt>
+                <dd data-vi="AI, marine-tech, tooling" data-en="AI, marine-tech, tooling">AI, marine-tech, tooling</dd>
+              </div>
+            </dl>
+            <p class="identity-note" data-vi="Đây là trang web cá nhân chính thức của Aden Nguyen (Thành Marine), nhà phát triển độc lập các ứng dụng hàng hải và công cụ hiện trường. Trang cung cấp thông tin sản phẩm, liên hệ và chính sách quyền riêng tư." data-en="This is the official personal website of Aden Nguyen (Thành Marine), an independent developer of marine and field tools. It provides product information, contact details and the privacy policy.">
+              Đây là trang web cá nhân chính thức của Aden Nguyen (Thành Marine), nhà phát triển độc lập các ứng dụng hàng hải và công cụ hiện trường. Trang cung cấp thông tin sản phẩm, liên hệ và chính sách quyền riêng tư.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="work" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="kicker"><span>02</span> <span data-vi="Dự án" data-en="Work">Dự án</span></p>
+          <h2 id="work-title" data-vi="Những thứ tôi đang xây." data-en="What I'm building.">Những thứ tôi đang xây.</h2>
+          <p class="section-intro" data-vi="Mỗi dự án bắt đầu từ một vấn đề cụ thể trong vận hành, kỹ thuật hoặc công việc hiện trường." data-en="Every project starts with a specific problem in operations, engineering or field work.">Mỗi dự án bắt đầu từ một vấn đề cụ thể trong vận hành, kỹ thuật hoặc công việc hiện trường.</p>
+        </div>
+
+        <div class="project-list">
+          <article class="project reveal">
+            <p class="project-index mono">01</p>
+            <div class="project-body">
+              <div class="project-top">
+                <h3>Aden Tools</h3>
+                <span class="status" data-vi="Đang phát triển" data-en="In development">Đang phát triển</span>
+              </div>
+              <p data-vi="Hệ thống dịch vụ kỹ thuật và danh mục, được xây quanh truy cập dữ liệu local-first và quy trình thực địa — từ tra cứu thông số đến ghi nhận công việc bảo trì." data-en="A technical service and catalog system built around local-first data access and field workflows — from parts lookup to maintenance records.">
+                Hệ thống dịch vụ kỹ thuật và danh mục, được xây quanh truy cập dữ liệu local-first và quy trình thực địa — từ tra cứu thông số đến ghi nhận công việc bảo trì.
+              </p>
+              <ul class="tags" aria-label="Công nghệ">
+                <li>Python</li><li>SQLite</li><li>Local-first</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <p class="project-index mono">02</p>
+            <div class="project-body">
+              <div class="project-top">
+                <h3>Emma Agent</h3>
+                <span class="status" data-vi="Đang phát triển" data-en="In development">Đang phát triển</span>
+              </div>
+              <p data-vi="Agent AI cục bộ tập trung vào hiểu ngôn ngữ tự nhiên (NLU), công cụ tùy biến và tự động hóa các quy trình lặp lại — chạy trên hạ tầng của bạn, không phụ thuộc cloud." data-en="A local AI agent focused on natural-language understanding, custom tools and automating repetitive workflows — running on your own infrastructure, not in the cloud.">
+                Agent AI cục bộ tập trung vào hiểu ngôn ngữ tự nhiên (NLU), công cụ tùy biến và tự động hóa các quy trình lặp lại — chạy trên hạ tầng của bạn, không phụ thuộc cloud.
+              </p>
+              <ul class="tags" aria-label="Công nghệ">
+                <li>Ollama</li><li>Gemma</li><li>Agents</li><li>Vector search</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <p class="project-index mono">03</p>
+            <div class="project-body">
+              <div class="project-top">
+                <h3>Pocket Marine &amp; Field Tools</h3>
+                <span class="status" data-vi="Đang phát triển" data-en="In development">Đang phát triển</span>
+              </div>
+              <p data-vi="Ứng dụng di động nhẹ cho thuyền viên và kỹ thuật viên: theo dõi chỉ số động cơ, tra cứu dữ liệu kỹ thuật và xử lý công việc nhanh tại hiện trường, kể cả khi mất mạng." data-en="Lightweight mobile apps for crew and technicians: engine metrics, technical data lookup and fast field workflows — even when the network is gone.">
+                Ứng dụng di động nhẹ cho thuyền viên và kỹ thuật viên: theo dõi chỉ số động cơ, tra cứu dữ liệu kỹ thuật và xử lý công việc nhanh tại hiện trường, kể cả khi mất mạng.
+              </p>
+              <ul class="tags" aria-label="Công nghệ">
+                <li>Mobile</li><li>NMEA 2000</li><li>Offline</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <p class="fineprint reveal">
+          <span data-vi="Một số dự án chưa có liên kết công khai. Theo dõi GitHub để xem cập nhật mới nhất." data-en="Some projects don't have public links yet. Follow GitHub for the latest updates.">Một số dự án chưa có liên kết công khai. Theo dõi GitHub để xem cập nhật mới nhất.</span>
+          <a href="https://github.com/ThanhMarine" target="_blank" rel="noopener noreferrer">github.com/ThanhMarine <span aria-hidden="true">↗</span></a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="approach" aria-labelledby="approach-title">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="kicker"><span>03</span> <span data-vi="Cách tôi làm việc" data-en="Approach">Cách tôi làm việc</span></p>
+          <h2 id="approach-title" data-vi="Ưu tiên sự thực dụng." data-en="Usefulness over hype.">Ưu tiên sự thực dụng.</h2>
+        </div>
+
+        <div class="principle-grid">
+          <article class="principle reveal">
+            <p class="principle-number mono">01</p>
+            <h3 data-vi="Thực tế trước tiên" data-en="Real-world first">Thực tế trước tiên</h3>
+            <p data-vi="Giải pháp phải xử lý được vấn đề trong ca làm việc thật, không chỉ đẹp trên bản demo." data-en="A solution has to solve the problem during a real shift, not just look good in a demo.">Giải pháp phải xử lý được vấn đề trong ca làm việc thật, không chỉ đẹp trên bản demo.</p>
+          </article>
+          <article class="principle reveal">
+            <p class="principle-number mono">02</p>
+            <h3 data-vi="Hoạt động khi mất mạng" data-en="Works offline">Hoạt động khi mất mạng</h3>
+            <p data-vi="Thiết kế local-first: dữ liệu và tính năng cốt lõi vẫn dùng được khi không có internet." data-en="Local-first by design: core data and features keep working without an internet connection.">Thiết kế local-first: dữ liệu và tính năng cốt lõi vẫn dùng được khi không có internet.</p>
+          </article>
+          <article class="principle reveal">
+            <p class="principle-number mono">03</p>
+            <h3 data-vi="Rõ ràng cho người kỹ thuật" data-en="Clear for technical users">Rõ ràng cho người kỹ thuật</h3>
+            <p data-vi="Thông tin đúng, trạng thái rõ, thao tác nhanh — không giấu chi tiết quan trọng sau menu." data-en="Accurate information, visible state, fast actions — important details are never buried in a menu.">Thông tin đúng, trạng thái rõ, thao tác nhanh — không giấu chi tiết quan trọng sau menu.</p>
+          </article>
+          <article class="principle reveal">
+            <p class="principle-number mono">04</p>
+            <h3 data-vi="Cải tiến qua phản hồi" data-en="Built through feedback">Cải tiến qua phản hồi</h3>
+            <p data-vi="Xây, dùng, quan sát, sửa. Sản phẩm tốt là sản phẩm được dùng thật và liên tục được làm rõ." data-en="Build, use, observe, fix. Good products are used in the real world and continuously made clearer.">Xây, dùng, quan sát, sửa. Sản phẩm tốt là sản phẩm được dùng thật và liên tục được làm rõ.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="stack" aria-labelledby="stack-title">
+      <div class="shell">
+        <div class="section-head reveal">
+          <p class="kicker"><span>04</span> <span data-vi="Năng lực" data-en="Stack">Năng lực</span></p>
+          <h2 id="stack-title" data-vi="Công cụ và lĩnh vực." data-en="Tools and domains.">Công cụ và lĩnh vực.</h2>
+        </div>
+
+        <div class="stack-grid">
+          <div class="stack-group reveal">
+            <h3 data-vi="Nền tảng" data-en="Core">Nền tảng</h3>
+            <ul>
+              <li>Python</li><li>C / C++</li><li>SQLite</li><li>SQL</li><li>Markdown</li>
+            </ul>
+          </div>
+          <div class="stack-group reveal">
+            <h3 data-vi="AI &amp; dữ liệu" data-en="AI &amp; data">AI &amp; dữ liệu</h3>
+            <ul>
+              <li>Ollama</li><li>Gemma</li><li>Redis Vector Store</li><li data-vi="Quy trình Obsidian" data-en="Obsidian workflows">Quy trình Obsidian</li>
+            </ul>
+          </div>
+          <div class="stack-group reveal">
+            <h3 data-vi="Hàng hải &amp; kỹ thuật" data-en="Marine &amp; engineering">Hàng hải &amp; kỹ thuật</h3>
+            <ul>
+              <li>NMEA 2000 (N2K)</li><li>CAD / 3D</li><li>SolidWorks</li><li>Fusion 360</li>
+            </ul>
+          </div>
+          <div class="stack-group reveal">
+            <h3 data-vi="Quy trình" data-en="Workflow">Quy trình</h3>
+            <ul>
+              <li>VS Code</li><li data-vi="Prompt engineering" data-en="Prompt engineering">Prompt engineering</li><li data-vi="Kiến trúc agent" data-en="Agent architecture">Kiến trúc agent</li><li data-vi="Tư duy local-first" data-en="Local-first thinking">Tư duy local-first</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-panel">
+        <div class="contact-copy reveal">
+          <p class="kicker"><span>05</span> <span data-vi="Liên hệ" data-en="Contact">Liên hệ</span></p>
+          <h2 id="contact-title" data-vi="Cùng xây một thứ gì đó thực dụng." data-en="Let's build something useful.">Cùng xây một thứ gì đó thực dụng.</h2>
+          <p data-vi="Nếu bạn đang làm việc với telemetry hàng hải, AI local-first, thiết bị hiện trường hoặc cần một người cùng gỡ bài toán vận hành — tôi rất sẵn lòng trao đổi." data-en="If you work with marine telemetry, local-first AI or field devices — or need someone to untangle an operational problem — I'd be glad to talk.">
+            Nếu bạn đang làm việc với telemetry hàng hải, AI local-first, thiết bị hiện trường hoặc cần một người cùng gỡ bài toán vận hành — tôi rất sẵn lòng trao đổi.
+          </p>
+          <div class="contact-actions">
+            <a class="button button-signal" href="mailto:ngn.ngocthanh@gmail.com?subject=Hello%20Th%C3%A0nh%20Marine">
+              <span data-vi="Gửi email" data-en="Send an email">Gửi email</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5.5 15 10l-4.5 4.5"></path></svg>
+            </a>
+            <a class="button button-outline-light" href="https://github.com/ThanhMarine" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="contact-card reveal">
+          <dl>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:ngn.ngocthanh@gmail.com">ngn.ngocthanh@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt>GitHub</dt>
+              <dd><a href="https://github.com/ThanhMarine" target="_blank" rel="noopener noreferrer">@ThanhMarine</a></dd>
+            </div>
+            <div>
+              <dt data-vi="Khu vực" data-en="Location">Khu vực</dt>
+              <dd data-vi="TP. Hồ Chí Minh, Việt Nam" data-en="Ho Chi Minh City, Vietnam">TP. Hồ Chí Minh, Việt Nam</dd>
+            </div>
+            <div>
+              <dt data-vi="Ngôn ngữ" data-en="Languages">Ngôn ngữ</dt>
+              <dd data-vi="Tiếng Việt · English" data-en="Vietnamese · English">Tiếng Việt · English</dd>
+            </div>
+          </dl>
+          <p class="contact-note" data-vi="Trang web tĩnh, không có biểu mẫu thu thập dữ liệu. Email là kênh liên hệ chính." data-en="This is a static site with no data-collecting forms. Email is the main contact channel.">Trang web tĩnh, không có biểu mẫu thu thập dữ liệu. Email là kênh liên hệ chính.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-brand">
+        <p>© <span id="year">2026</span> Aden Nguyen (Thành Marine)</p>
+        <p class="footer-note" data-vi="Trang web cá nhân · TP. Hồ Chí Minh, Việt Nam" data-en="Personal website · Ho Chi Minh City, Vietnam">Trang web cá nhân · TP. Hồ Chí Minh, Việt Nam</p>
+      </div>
+      <nav class="footer-nav" aria-label="Liên kết chân trang">
+        <a href="privacy.html" data-vi="Chính sách quyền riêng tư" data-en="Privacy policy">Chính sách quyền riêng tư</a>
+        <a href="terms.html" data-vi="Điều khoản sử dụng" data-en="Terms of use">Điều khoản sử dụng</a>
+        <a href="https://github.com/ThanhMarine" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+      <p class="footer-updated mono" data-vi="Cập nhật: 05/11/2026" data-en="Updated: 05 Nov 2026">Cập nhật: 05/11/2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
